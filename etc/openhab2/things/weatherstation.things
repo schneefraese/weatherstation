@@ -1,0 +1,4 @@
+Thing exec:command:weatherstation_temperature "Temperatur"              [command="/etc/openhab2/scripts/weatherstation.py temperature", transform="REGEX((.*?))", interval=60, timeout=10, autorun=true]
+Thing exec:command:weatherstation_humidity "Luftfeuchtigkeit"           [command="/etc/openhab2/scripts/weatherstation.py humidity", transform="REGEX((.*?))", interval=10, timeout=10, autorun=true]
+Thing exec:command:weatherstation_pressure "Luftdruck"                  [command="/etc/openhab2/scripts/weatherstation.py pressure", transform="REGEX((.*?))", interval=60, timeout=10, autorun=true]
+Thing exec:command:weatherstation_altitude "Höhe"                       [command="/etc/openhab2/scripts/weatherstation.py altitude", transform="REGEX((.*?))", interval=60, timeout=10, autorun=true]
