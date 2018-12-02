@@ -1,0 +1,36 @@
+rule "Weatherstation Temperature"
+  when
+     Item temperature_out received update
+  then
+      Weatherstation_Temperature.postUpdate(
+          ( ( Float::parseFloat(temperature_out.state.toString) as Number ) * 10 ) / 10
+      )
+
+end
+
+rule "Weatherstation Humidity"
+  when
+     Item humidity_out received update
+  then
+      Weatherstation_Humidity.postUpdate(
+          ( ( Float::parseFloat(humidity_out.state.toString) as Number ) * 10 ) / 10
+      )
+end
+
+rule "Weatherstation Pressure"
+  when
+     Item pressure_out received update
+  then
+      Weatherstation_Pressure.postUpdate(
+          ( ( Float::parseFloat(pressure_out.state.toString) as Number ) * 10 ) / 10
+      )
+end
+
+rule "Weatherstation Altitude"
+  when
+     Item altitude_out received update
+  then
+      Weatherstation_Altitude.postUpdate(
+          ( ( Float::parseFloat(altitude_out.state.toString) as Number ) * 10 ) / 10
+      )
+end
