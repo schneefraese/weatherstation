@@ -1,0 +1,21 @@
+Group  Weatherstation_Chart (System, Charts)
+Number Weatherstation_Chart_Period "Periode" (System)
+Number Weatherstation_Temperature       "Temperatur [%.1f °C]" <temperature> (Weatherstation_Chart)
+String temperature_out          { channel="exec:command:weatherstation_temperature:output" }
+
+
+Group  Weatherstation_Chart_Humidity (System, Charts)
+Number Weatherstation_Chart_Humidity_Period "Periode" (System)
+Number Weatherstation_Humidity          "Luftfeuchtigkeit [%.1f %%]" <humidity> (Weatherstation_Chart_Humidi$
+String humidity_out             { channel="exec:command:weatherstation_humidity:output" }
+
+Group  Weatherstation_Chart_Pressure (System, Charts)
+Number Weatherstation_Chart_Pressure_Period "Periode" (System)
+Number Weatherstation_Pressure          "Luftdruck [%.1f hPa]" <pressure> (Weatherstation_Chart_Pressure)
+String pressure_out             { channel="exec:command:weatherstation_pressure:output" }
+
+
+Group  Weatherstation_Chart_Altitude (System, Charts)
+Number Weatherstation_Chart_Altitude_Period "Periode" (System)
+Number Weatherstation_Altitude          "Höhe [%.1f m]" <altitude> (Weatherstation_Chart_Altitude)
+String altitude_out             { channel="exec:command:weatherstation_altitude:output" }
